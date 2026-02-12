@@ -1,7 +1,7 @@
 import Hero from "../components/LandingPage/HeroSection"
 import Stats from "../components/LandingPage/Stats"
 import Features from '../components/LandingPage/Features';
-import Footer from "../Layouts/Footer"
+import Footer from "../components/Layouts/Footer"
 
 
 export default function LandingPage() {
