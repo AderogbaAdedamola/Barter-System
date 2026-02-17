@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import LandingPage from './pages/LandingPage'
+import SignUp from './pages/signup'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -8,7 +10,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<LandingPage/>}></Route>
+        <Route path='/' element={<LandingPage/>} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </BrowserRouter>
   )
