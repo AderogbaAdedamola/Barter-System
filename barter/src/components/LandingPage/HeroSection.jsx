@@ -1,6 +1,6 @@
 
 const Hero = () => (
-  <section className="relative bg-linear-to-br from-red-600 via-red-500 to-green-600 text-white py-30 px-6 overflow-hidden">
+  <section className="relative bg-linear-to-br from-red-600 via-red-500 to-green-600 text-white pt-20 pb-35 px-6 overflow-hidden">
     <div className="max-w-5xl mx-auto text-center relative z-10">
       <span className="bg-white/20 backdrop-blur-md px-4 py-1 rounded-full text-sm font-medium mb-6 inline-block border border-white/30">
         NG Empowering Oyo State Youth

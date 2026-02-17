@@ -1,23 +1,47 @@
-const Features = () => (
-  <section className="py-20 bg-gray-50 px-6 text-center">
-    <h2 className="text-4xl font-bold text-slate-900 mb-2">How It Works</h2>
-    <p className="text-gray-500 mb-16">Start exchanging skills in three simple steps</p>
-    <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
-      {[
-        { step: '1', title: 'Create Profile', desc: 'Sign up and list your skills—what you can offer and what you need.', bg: 'bg-red-600' },
-        { step: '2', title: 'Find Matches', desc: 'Browse services and connect with people whose needs align with your skills.', bg: 'bg-green-600' },
-        { step: '3', title: 'Exchange Skills', desc: 'Coordinate through our community chat, exchange services, and rate each other.', bg: 'bg-gradient-to-br from-red-500 to-green-500' },
-      ].map((item, i) => (
-        <div key={i} className="flex flex-col items-center">
-          <div className={`${item.bg} w-16 h-16 rounded-2xl text-white flex items-center justify-center text-2xl font-bold mb-6 shadow-lg`}>
-            {item.step}
+import React from 'react';
+import { ShieldCheck, MessageSquare, Zap, Heart } from 'lucide-react';
+
+const Features = () => {
+  const features = [
+    {
+      title: "No Money Needed",
+      desc: "Trade skills directly without any cash transactions. Perfect for talented youth with limited funds.",
+      icon: <ShieldCheck className="text-red-600 w-8 h-8" />,
+    },
+    {
+      title: "Community Chat",
+      desc: "Connect and communicate with other members through our integrated community chat feature.",
+      icon: <MessageSquare className="text-green-600 w-8 h-8" />,
+    },
+    {
+      title: "Smart Matching",
+      desc: "Our platform intelligently matches you with users who need what you offer and have what you need.",
+      icon: <Zap className="text-red-600 w-8 h-8" />,
+    },
+    {
+      title: "Build Reputation",
+      desc: "Rating and review system ensures quality exchanges and helps you build a trusted profile.",
+      icon: <Heart className="text-green-600 w-8 h-8" />,
+    },
+  ];
+
+  return (
+    <section className="py-20 bg-white px-6">
+      <div className="max-w-6xl mx-auto text-center mb-16">
+        <h2 className="text-4xl font-bold text-slate-900 mb-4">Why Choose Barter System?</h2>
+        <p className="text-gray-500">Built for the talented youth of Oyo State</p>
+      </div>
+      <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-6">
+        {features.map((f, i) => (
+          <div key={i} className="p-8 rounded-2xl border border-gray-100 hover:shadow-xl transition-shadow bg-white">
+            <div className="mb-6">{f.icon}</div>
+            <h3 className="text-xl font-bold mb-3 text-slate-900">{f.title}</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">{f.desc}</p>
           </div>
-          <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-          <p className="text-gray-600 leading-relaxed">{item.desc}</p>
-        </div>
-      ))}
-    </div>
-  </section>
-)
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default Features
