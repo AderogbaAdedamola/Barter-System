@@ -36,3 +36,5 @@ const ActiveExchangeCard = ({ exchange }) => (
     </div>
   </div>
 );
+
+export default ActiveExchangeCard

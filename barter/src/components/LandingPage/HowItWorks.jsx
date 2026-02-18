@@ -20,7 +20,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section id='about' className="py-24 bg-gray-50/50">
+    <section id='#about' className="py-24 bg-gray-50/50">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight">How It Works</h2>
         <p className="text-lg text-gray-500 mb-16">Start exchanging skills in three simple steps</p>

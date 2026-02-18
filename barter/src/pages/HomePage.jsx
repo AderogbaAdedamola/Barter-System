@@ -7,7 +7,7 @@ import SmartMatches from "../components/HomePage/SmartMatches"
 import MyOffers from "../components/HomePage/MyOffers"
 import { currentUser, mockExchanges, mockMyServices, mockSuggestions } from '../data/mockData';
 
-export function HomePage() {
+export default function HomePage() {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState({ exchanges: [], offers: [], matches: [] });
 

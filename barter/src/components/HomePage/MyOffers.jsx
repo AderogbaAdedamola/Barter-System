@@ -45,3 +45,5 @@ const MyOffers = ({ offers }) => {
     </section>
   );
 };
+
+export default MyOffers

@@ -55,3 +55,5 @@ const SmartMatches = ({ suggestions }) => {
     </section>
   );
 };
+
+export default SmartMatches

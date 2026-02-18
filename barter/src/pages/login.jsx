@@ -16,11 +16,11 @@ function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-[#FEF4F4] via-[#FFF8F8] to-white flex flex-col items-center px-4 py-14">
+    <div className="min-h-screen bg-linear-to-r from-[#FEF4F4] via-[#FFF8F8] to-white flex flex-col items-center px-4 py-14">
       {/* Header */}
       <div className="text-center mb-8 max-w-xl">
         <Link to="/" className="flex items-center justify-center gap-5 mb-6">
-            <div className="w-16 h-16 rounded-full bg-gradient-to-r from-red-500 to-green-500 flex items-center justify-center text-white shadow-sm text-[25px]">
+            <div className="w-16 h-16 rounded-full bg-linear-to-r from-red-500 to-green-500 flex items-center justify-center text-white shadow-sm text-[25px]">
               👤
             </div>
             <span className="text-[28px] font-extrabold text-lg text-gray-900">Barter System</span>
@@ -94,7 +94,7 @@ function Login() {
           {/* Button */}
           <button
             type="submit"
-            className="w-full h-12 rounded-xl text-white font-semibold bg-gradient-to-r from-red-500 via-orange-500 to-green-500 shadow-md hover:opacity-95 active:opacity-90 active:scale-[0.99] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-red-100 transition"
+            className="w-full h-12 rounded-xl text-white font-semibold bg-linear-to-r from-red-500 via-orange-500 to-green-500 shadow-md hover:opacity-95 active:opacity-90 active:scale-[0.99] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-red-100 transition"
           >
             Log In
           </button>

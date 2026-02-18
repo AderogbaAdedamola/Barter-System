@@ -23,3 +23,5 @@ const StatusOverview = ({ stats }) => {
     </div>
   );
 };
+
+export default StatusOverview
