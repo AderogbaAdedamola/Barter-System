@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
   const [error, setError] = useState("");
@@ -14,6 +14,17 @@ function Login() {
         : "Password must be at least 8 characters and include letters, numbers and special characters."
     );
   };
+
+  const navigate = useNavigate();
+  
+  const handleSubmit = (e) => {
+  e.preventDefault();
+
+  if (!error) {
+    navigate("/home");
+  }
+};
+
 
   return (
     <div className="min-h-screen bg-linear-to-r from-[#FEF4F4] via-[#FFF8F8] to-white flex flex-col items-center px-4 py-14">
@@ -36,7 +47,7 @@ function Login() {
 
       {/* Card */}
       <div className="bg-white w-full max-w-xl rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.10)] px-8 py-9 sm:px-10 sm:py-10 border border-black/5">
-        <form className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6">
           {/* Email */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
