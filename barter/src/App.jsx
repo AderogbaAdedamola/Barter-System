@@ -1,23 +1,34 @@
 import { useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import LandingPage from './pages/LandingPage'
 import SignUp from './pages/Signup'
 import Login from './pages/Login';
 import Home from './pages/HomePage';
+import ProfilePage from './pages/Profile'
+import MainLayout from './components/Layouts/MainLayout';
+import BrowseServices from './pages/BrowseServices';
+import Notifications from './pages/Notifications';
 
 
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<LandingPage/>} />
-        <Route path="/home" element={<Home />} />
+        <Route element={<MainLayout />}>
+          <Route path="/home" element={<Home />} />
+          <Route path="/browse" element={<BrowseServices />} />
+          {/* <Route path="/post-service" element={<PostService />} /> */}
+          <Route path="/notifications" element={<Notifications />} />
+          <Route path="/profile/:id" element={<ProfilePage />} />
+        </Route>
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
+
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
   )

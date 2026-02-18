@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 // import axios from 'axios';
-import DashboardHeader from "../components/HomePage/Header"
+import DashboardHeader from "../components/Layouts/Header"
 import StatusOverview from "../components/HomePage/StatusOverview"
 import ActiveExchangeCard from "../components/HomePage/ActiveExchange"
 import SmartMatches from "../components/HomePage/SmartMatches"
@@ -37,12 +37,10 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC]">
-      <DashboardHeader user={currentUser} />
       
       <main className="max-w-7xl mx-auto px-6 py-8">
         <div className="grid lg:grid-cols-12 gap-8">
           
-          {/* Left Column: Operations */}
           <div className="lg:col-span-8">
             <h2 className="text-2xl font-black text-slate-900 mb-6">Dashboard</h2>
             <StatusOverview stats={data.exchanges} />
@@ -60,7 +58,6 @@ export default function HomePage() {
             <SmartMatches suggestions={data.matches} />
           </div>
 
-          {/* Right Column: Inventory & Stats */}
           <div className="lg:col-span-4 space-y-8">
              <div className="bg-linear-to-br from-slate-900 to-slate-800 rounded-4xl p-8 text-white shadow-2xl">
                <p className="text-xs uppercase font-bold text-slate-400 mb-1">Your Trust Score</p>

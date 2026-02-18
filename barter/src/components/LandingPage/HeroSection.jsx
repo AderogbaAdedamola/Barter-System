@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Users } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -12,10 +12,10 @@ const Hero = () => {
 
       <nav className="relative z-20 w-full max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-lg">
-             <span className="text-red-600 font-black text-xl italic">B</span>
+          <div className="size-8 bg-linear-to-br from-red-600 to-green-600 rounded-full flex items-center justify-center">
+            <Users className="size-5 text-white" />
           </div>
-          <span className="text-2xl font-bold tracking-tight">Barter System</span>
+          <span className="font-bold text-xl">Barter System</span>
         </div>
         
         <div className="hidden md:flex items-center gap-8 font-medium text-sm">
@@ -66,10 +66,13 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* 4. WAVE DIVIDER (Exact Match to Design) */}
+      {/*  WAVE DIVIDER */}
       <div className="absolute bottom-0 left-0 right-0 w-full leading-0">
-        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" className="w-full h-15 md:h-25 fill-white">
+        {/* <svg viewBox="0 0 1440 120" preserveAspectRatio="none" className="w-full h-15 md:h-25 fill-white">
           <path d="M0,32L60,42.7C120,53,240,75,360,80C480,85,600,75,720,58.7C840,43,960,21,1080,21.3C1200,21,1320,43,1380,53.3L1440,64L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"></path>
+        </svg> */}
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0L60 10C120 20 240 40 360 46.7C480 53 600 47 720 43.3C840 40 960 40 1080 46.7C1200 53 1320 67 1380 73.3L1440 80V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V0Z" fill="white"/>
         </svg>
       </div>
     </section>
