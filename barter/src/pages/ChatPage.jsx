@@ -45,7 +45,7 @@ export default function CommunityChatPage() {
 
   return (
     // We use w-screen h-screen to take over the entire viewport
-    <div className="fixed inset-0 flex bg-white z-[100] overflow-hidden">
+    <div className="fixed inset-0 flex bg-white z-100 overflow-hidden">
       
       {/* 1. CUSTOM SIDEBAR */}
       <Sidebar 
