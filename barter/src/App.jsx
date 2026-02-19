@@ -8,6 +8,8 @@ import ProfilePage from './pages/Profile'
 import MainLayout from './components/Layouts/MainLayout';
 import BrowseServices from './pages/BrowseServices';
 import Notifications from './pages/Notifications';
+import PostService from "./pages/PostService";
+
 
 
 
@@ -21,7 +23,7 @@ function App() {
         <Route element={<MainLayout />}>
           <Route path="/home" element={<Home />} />
           <Route path="/browse" element={<BrowseServices />} />
-          {/* <Route path="/post-service" element={<PostService />} /> */}
+          <Route path="/post-service" element={<PostService />} /> 
           <Route path="/notifications" element={<Notifications />} />
           <Route path="/profile/:id" element={<ProfilePage />} />
         </Route>

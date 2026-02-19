@@ -45,7 +45,7 @@ function Login() {
         </p>
       </div>
 
-      {/* Card */}
+      {/* Login Card */}
       <div className="bg-white w-full max-w-xl rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.10)] px-8 py-9 sm:px-10 sm:py-10 border border-black/5">
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Email */}
