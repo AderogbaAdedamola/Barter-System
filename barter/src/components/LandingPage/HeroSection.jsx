@@ -20,7 +20,7 @@ const Hero = () => {
         
         <div className="hidden md:flex items-center gap-8 font-medium text-sm">
           {/* <Link to="/explore" className="hover:text-white/80 transition">Explore Skills</Link> */}
-          <a to="#about" className="hover:text-white/80 transition">How it Works</a>
+          <a href="#about" className="hover:text-white/80 transition">How it Works</a>
           <div className="h-4 w-px bg-white/30"></div>
           <Link to="/login" className="hover:text-white/80 transition">Login</Link>
           <Link to="/signup" className="bg-white text-red-600 px-5 py-2.5 rounded-full font-bold hover:shadow-xl transition transform hover:-translate-y-0.5">
@@ -44,21 +44,21 @@ const Hero = () => {
             Trade Skills, Build Community
           </p>
           
-          <p className="text-lg md:text-xl mb-12 text-white/85 max-w-2xl mx-auto leading-relaxed">
-            Connect with talented youths across Oyo State. Exchange your skills for services you need—no money required. From logo design to coding lessons, tailoring to tutoring.
+          <p className="text-lg md:text-xl mb-10 text-white/85 max-w-2xl mx-auto leading-relaxed">
+            Connect with talented youths across Oyo State. Exchange your skills for services you need, no money required. From logo design to coding lessons, tailoring to tutoring.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row pb-7 gap-4 justify-center items-center">
             <Link
               to="/signup"
-              className="w-full sm:w-auto inline-flex items-center justify-center px-10 py-5 bg-white text-red-600 rounded-2xl font-bold text-lg hover:bg-gray-50 transition-all shadow-2xl hover:scale-105"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-white text-red-600 rounded-2xl font-bold text-lg hover:bg-gray-50 transition-all shadow-2xl hover:scale-105"
             >
               Get Started Free
               <ArrowRight className="ml-2 size-5" />
             </Link>
             <Link
               to="/home"
-              className="w-full sm:w-auto inline-flex items-center justify-center px-10 py-5 bg-transparent text-white rounded-2xl font-bold text-lg hover:bg-white/10 transition-all border-2 border-white backdrop-blur-sm"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-transparent text-white rounded-2xl font-bold text-lg hover:bg-white/10 transition-all border-2 border-white backdrop-blur-sm"
             >
               Explore Platform
             </Link>

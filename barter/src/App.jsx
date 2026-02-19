@@ -8,7 +8,9 @@ import ProfilePage from './pages/Profile'
 import MainLayout from './components/Layouts/MainLayout';
 import BrowseServices from './pages/BrowseServices';
 import Notifications from './pages/Notifications';
-
+import Settings from './pages/Settings'
+import ServiceDetail from './pages/ServiceDetail';
+import ChatPage from './pages/ChatPage'
 
 
 
@@ -23,10 +25,13 @@ function App() {
           <Route path="/browse" element={<BrowseServices />} />
           {/* <Route path="/post-service" element={<PostService />} /> */}
           <Route path="/notifications" element={<Notifications />} />
+          <Route path="/settings" element={<Settings />} />
           <Route path="/profile/:id" element={<ProfilePage />} />
+          <Route path="/service/:id" element={<ServiceDetail />} />
         </Route>
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/chat" element={<ChatPage />} /> 
 
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

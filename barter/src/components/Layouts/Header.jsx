@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { 
   Search, 
   Bell, 
@@ -16,6 +16,8 @@ export default function Header({ user }) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
   const navigate = useNavigate();
+  const location = useLocation()
+  const isBrowseActive = location.pathname.toLowerCase().startsWith("/browse")
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -41,16 +43,24 @@ export default function Header({ user }) {
             <div className="size-8 bg-linear-to-br from-red-600 to-green-600 rounded-full flex items-center justify-center">
               <Users className="size-5 text-white" />
             </div>
-            <span className="font-bold text-xl text-gray-900">Barter System</span>
+            <span className="font-bold text-xl text-gray-900 truncate">Barter System</span>
           </Link>
           
           <div className="relative hidden md:block group">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-gray-400 group-focus-within:text-red-500" />
-            <input 
-              onFocus={() => navigate('/browse')}
+            { isBrowseActive ?
+            (<input 
+              // onFocus={() => navigate('/browse')}
               className="bg-gray-50 border-none rounded-full py-2 pl-10 pr-4 text-sm w-80 focus:ring-2 focus:ring-red-500/20 transition-all cursor-pointer"
               placeholder="Search skills..."
-            />
+            />) :
+            (<div
+              onClick={() => navigate('/browse')}
+              className="bg-red-50 border-none rounded-full py-2 pl-10 pr-4 text-sm w-80 focus:ring-2 focus:ring-red-500/20 transition-all cursor-pointer"
+              >
+              <p>Search skills...</p>
+            </div>)
+            }
           </div>
         </div>
         
@@ -59,7 +69,7 @@ export default function Header({ user }) {
             to="/post-service" 
             className="hidden sm:flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-xl text-sm font-bold hover:bg-red-700 transition"
           >
-            <PlusSquare className="size-4" /> Post Skill
+            <PlusSquare className="size-4" /> <span className='truncate'>Post Skill</span> 
           </Link>
 
           <Link to="/chat" className="p-2 text-gray-500 hover:bg-gray-50 rounded-full relative">
