@@ -8,9 +8,9 @@ import ProfilePage from './pages/Profile'
 import MainLayout from './components/Layouts/MainLayout';
 import BrowseServices from './pages/BrowseServices';
 import Notifications from './pages/Notifications';
-import Settings from './pages/Settings'
+import Settings from './pages/Settings';
 import ServiceDetail from './pages/ServiceDetail';
-import ChatPage from './pages/ChatPage'
+import ChatPage from './pages/ChatPage';
 
 
 
