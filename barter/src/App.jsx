@@ -11,6 +11,7 @@ import Notifications from './pages/Notifications';
 import Settings from './pages/Settings';
 import ServiceDetail from './pages/ServiceDetail';
 import ChatPage from './pages/ChatPage';
+import PostService from './pages/PostService'
 
 
 
@@ -23,7 +24,7 @@ function App() {
         <Route element={<MainLayout />}>
           <Route path="/home" element={<Home />} />
           <Route path="/browse" element={<BrowseServices />} />
-          {/* <Route path="/post-service" element={<PostService />} /> */}
+          <Route path="/post-service" element={<PostService />} />
           <Route path="/notifications" element={<Notifications />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/profile/:id" element={<ProfilePage />} />
